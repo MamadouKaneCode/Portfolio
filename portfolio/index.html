@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMK | Portfolio</title>
+<link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Portfolio d'El Hadji Mamadou KANE, étudiant en Génie Logiciel à l'ISI Keur Massar (Sénégal). Projets web, HTML/CSS/JavaScript, C, Python, orientation IA. Disponible pour stage ou collaboration.">
+  <meta name="theme-color" content="#0a0e1a">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.classList.add('light');
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f4f6fb');
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+<!-- ===== LOADER ===== -->
+<div class="page-loader" id="pageLoader">
+  <div class="loader-logo"><i class="fa-solid fa-code"></i> EMK</div>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="#" class="logo"><i class="fa-solid fa-code"></i> EMK</a>
+    <nav class="nav-links">
+      <a href="#home" class="active">Accueil</a>
+      <a href="#about">À propos</a>
+      <a href="#skills">Compétences</a>
+      <a href="#projects">Projets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="navbar-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Activer le mode clair" title="Basculer mode clair / sombre">
+        <i class="fa-solid fa-moon" id="themeIcon" aria-hidden="true"></i>
+      </button>
+      <a href="#contact" class="btn btn-primary nav-cta">Me contacter <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+    <button class="burger" id="burger"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div class="hero-text" data-reveal>
+      <span class="badge">2e année Génie Logiciel · Disponible pour un stage</span>
+      <h1>Salut, je suis <span class="highlight">El Hadji Mamadou KANE</span></h1>
+      <h2>Étudiant en Génie Logiciel, passionné par l'IA.</h2>
+      <p>Étudiant en 2e année de Génie Logiciel à l'ISI (Institut Supérieur d'Informatique) de Keur Massar, au Sénégal, je construis mes bases en développement web et en développement d'applications à travers des projets concrets, avec l'ambition de me spécialiser en intelligence artificielle.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">Voir Mon Travail</a>
+        <a href="MonCV – El Hadji Mamadou Kane.pdf" download="MonCV – El Hadji Mamadou Kane.pdf" class="btn btn-outline">Télécharger mon CV<i class="fa-solid fa-download"></i></a>
+      </div>
+      <div class="tech-stack">
+        <span class="tech-label">Les technologies que je maîtrise</span>
+        <div class="tech-icons">
+          <i class="fa-brands fa-html5" style="color:#e34f26;"></i>
+          <i class="fa-brands fa-css3-alt" style="color:#264de4;"></i>
+          <i class="fa-brands fa-js" style="color:var(--brand-js);"></i>
+          <i class="fa-brands fa-git-alt" style="color:#f34f29;"></i>
+          <i class="fa-brands fa-github" style="color:var(--brand-github);"></i>
+          <i class="fa-brands fa-bootstrap" style="color:#0d6efd;"></i>
+          <i class="fa-brands fa-python" style="color:var(--brand-python);"></i>
+          <i class="fa-solid fa-c" style="color:var(--icon-mono);"></i>
+          <i class="fa-solid fa-database" style="color: #f34f29;"></i>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image" data-reveal data-reveal-delay="150">
+      <div class="hero-circle"></div>
+      <picture>
+        <source srcset="images/image.webp" type="image/webp">
+        <img src="images/image.png" alt="El Hadji Mamadou KANE - Développeur logiciel" width="320" height="320" fetchpriority="high" decoding="async">
+      </picture>
+      <br><br>
+      <div class="code-card">
+        <div class="code-dot"></div>
+        <pre><code>const developer = {
+  name: <span class="str">"El Hadji Mamadou KANE"</span>,
+  skills: [
+    <span class="str">"HTML"</span>, <span class="str">"CSS"</span>, <span class="str">"JavaScript"</span>,
+    <span class="str">"C"</span>, <span class="str">"Python"</span>, <span class="str">"Git"</span>, <span class="str">"Bootstrap"</span>
+  ],
+  passion: <span class="str">"Construire des solutions innovantes
+             pour le web et l'IA"</span>
+};</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="container about-inner">
+    <div class="about-main" data-reveal>
+      <span class="section-label">À propos de moi</span>
+      <h2>Je suis passionné par la création de solutions digitales et logicielles et l'innovation en intelligence artificielle.</h2>
+      <p>Je développe mes compétences en programmation, algorithme, développement web et d'application et en conception de logicielle, avec un intérêt particulier pour l'IA.
+        J'accorde une grande importance à l'organisation du code, à la logique et aux bonnes pratiques de développement. Curieux et rigoureux, j'aime analyser les problèmes en profondeur avant de proposer des solutions efficaces et évolutives.
+      </p>
+      <p>Mon ambition est de devenir ingénieur logiciel spécialisé en Intelligence Artificielle, capable de concevoir des systèmes fiables et performants.
+      </p>
+      <a href="#projects" class="btn btn-accent">Voir mes projets <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="about-side" data-reveal data-reveal-delay="150">
+      <h3 class="timeline-title">Parcours & Formation</h3>
+      <ol class="frise">
+        <li class="frise-item">
+          <span class="frise-dot" aria-hidden="true"></span>
+          <span class="frise-year">2022</span>
+          <h4>Baccalauréat Scientifique</h4>
+          <p>Obtention du bac scientifique.</p>
+        </li>
+        <li class="frise-item">
+          <span class="frise-dot" aria-hidden="true"></span>
+          <span class="frise-year">2022–2024</span>
+          <h4>Licence Physique-Chimie (L1 et L2)</h4>
+          <p>UCAD, Université Cheikh Anta Diop de Dakar. Bases scientifiques et rigueur analytique.</p>
+        </li>
+        <li class="frise-item">
+          <span class="frise-dot" aria-hidden="true"></span>
+          <span class="frise-year">2024–2025</span>
+          <h4>Année sabbatique</h4>
+        </li>
+        <li class="frise-item frise-current">
+          <span class="frise-dot" aria-hidden="true"></span>
+          <span class="frise-year">2025 → aujourd'hui <span class="frise-badge">En cours</span></span>
+          <h4>Génie Logiciel — ISI Keur Massar</h4>
+          <p>L1 validée, L2 en cours. Ma formation scientifique est une force au service du développement logiciel et de l'IA.</p>
+        </li>
+      </ol>
+    </div>
+    <div class="about-block assoc-card" data-reveal data-reveal-delay="80">
+      <h3 class="timeline-title"><i class="fa-solid fa-users-gear"></i> Vie associative</h3>
+      <p class="assoc-text">Chef de projet du <strong>DevClub</strong> à l'ISI — j'ai dirigé un projet collaboratif avec 2 autres membres, de la conception à la réalisation, en assurant l'organisation, la coordination et le partage des tâches.</p>
+    </div>
+    <div class="about-stats" data-reveal data-reveal-delay="100">
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fa-solid fa-calendar-days"></i></div>
+        <h3>2e année</h3>
+        <p>Génie Logiciel</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>3</h3>
+        <p>Projets réalisés</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fa-solid fa-users-gear"></i></div>
+        <h3>DevClub</h3>
+        <p>Chef de projet</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <h3>Réorientation</h3>
+        <p>Scientifique → Logiciel</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="skills" id="skills">
+  <div class="container">
+    <div class="section-heading" data-reveal>
+      <span class="section-label center">Mes compétences</span>
+      <h2>Technologies que je maîtrise</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-col" data-reveal>
+        <div class="skill-item">
+          <div class="skill-top"><i class="fa-brands fa-html5" style="color:#e34f26;"></i><span>HTML</span><span class="skill-pct">95%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:95%;"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><i class="fa-brands fa-css3-alt" style="color:#264de4;"></i><span>CSS</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:90%;"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><i class="fa-brands fa-js" style="color:var(--brand-js);"></i><span>JavaScript</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%;"></div></div>
+        </div>
+    </div>
+    <div class="skill-col" data-reveal data-reveal-delay="150">
+        <div class="skill-item">
+          <div class="skill-top"><i class="fa-brands fa-github" style="color:var(--brand-github);"></i><span>GitHub</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%;"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><i class="fa-brands fa-bootstrap" style="color:#264de4;"></i><span>Bootstrap</span><span class="skill-pct">95%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:95%;"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><i class="fa-brands fa-python" style="color:var(--brand-python);"></i><span>Python</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:70%;"></div></div>
+        </div>
+        
+    </div>
+    <div class="skill-col" data-reveal data-reveal-delay="300">
+       <div class="skill-item">
+          <div class="skill-top"><i class="fa-brands fa-git-alt" style="color:#f34f29;"></i><span>Git</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:85%;"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><i class="fa-solid fa-c" style="color:#f34f29;"></i><span>Language C</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%;"></div></div>
+        </div>
+         <div class="skill-item">
+          <div class="skill-top"><i class="fa-solid fa-database" style="color:#f34f29;"></i><span>MySQL</span><span class="skill-pct">50%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:50%;"></div></div>
+        </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ===== PROJETS ===== -->
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="section-heading" data-reveal>
+      <span class="section-label center">PROJETS EN COURS ET TERMINÉS</span>
+      <h2>Quelques-uns de mes projets récents</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card" data-reveal>
+        <div class="project-thumb thumb-1"><span class="project-number">01</span><picture>
+          <source srcset="images/image copy 2.webp" type="image/webp">
+          <img src="images/image copy 2.png" alt="Aperçu site SneakersShop" loading="lazy" decoding="async">
+        </picture></div>
+        <h3>Site vitrine E-Commerce</h3>
+        <p>Premier site vitrine que j'ai développé pour une boutique de chaussures codé en HTML, CSS avec plusieurs pages. Elle sera complétée prochainement avec d'autres langages de programmation comme le JS pour améliorer l'expérience utilisateur et le côté backend.</p>
+        <a href="https://insrobane4-tech.github.io/SneakersShop/" class="project-link">Voir le projet <i class="fa-solid fa-arrow-right"></i></a>
+      </div> 
+      <div class="project-card" data-reveal data-reveal-delay="150">
+        <div class="project-thumb thumb-2"><span class="project-number">02</span><picture>
+          <source srcset="images/LOGO.JOKKO.webp" type="image/webp">
+          <img src="images/LOGO.JOKKO.png" alt="Logo projet JOKKO" loading="lazy" decoding="async">
+        </picture></div>
+        <h3>Application vitrine de messagerie</h3>
+        <p>Application de messagerie instantanée avec fonctionnalités de groupe et de fichiers, réalisée en équipe de 2 étudiants.</p>
+                <a href="https://insrobane4-tech.github.io/JOKKO/" target="_blank" rel="noopener noreferrer" class="project-link">Voir le projet <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="project-card" data-reveal data-reveal-delay="300">
+        <div class="project-thumb thumb-3"><span class="project-number">03</span><picture>
+          <source srcset="images/image copy 4.webp" type="image/webp">
+          <img src="images/image copy 4.png" alt="Aperçu Sama Orientation" loading="lazy" decoding="async">
+        </picture></div>
+        <h3>Sama Orientation</h3>
+        <p>Sama Orientation est une application web en cours de réalisation qui aide les étudiants à explorer leurs options de carrière et à faire des choix éclairés.
+           En m'appuyant sur les compétences acquises en 1re année et en exploitant des outils d'IA (Claude, opencode), je développe cette solution pour présenter les différentes filières d'études, les métiers associés et les compétences requises pour réussir dans chaque domaine.
+           La plateforme proposera des outils d'orientation personnalisés (tests d'aptitude et questionnaires d'intérêt) afin d'aider chacun à identifier ses forces et ses préférences.
+        </p>
+        <a href="https://insrobane4-tech.github.io/Sama-Orientation/" target="_blank" rel="noopener noreferrer" class="project-link">Voir le projet <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-text" data-reveal>
+        <span class="section-label">TRAVAILLONS ENSEMBLE</span>
+        <h2>Discutons de votre projet</h2>
+        <p>Ouvert aux opportunités de stage, de collaboration ou de mission. Remplissez le formulaire ci-contre et je vous répondrai dans les plus brefs délais.</p>
+        <ul class="contact-info">
+          <li>
+            <span class="contact-info-icon"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i></span>
+            Ouvert aux stages, collaborations et missions
+          </li>
+          <li>
+            <span class="contact-info-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+            Basé au Sénégal
+          </li>
+          <li>
+            <span class="contact-info-icon"><i class="fa-solid fa-share-nodes" aria-hidden="true"></i></span>
+            <div class="contact-socials">
+              <a href="https://github.com/insrobane4-tech" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/el-hadji-mamadou-kane-49951a443/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact-form" id="contactForm" data-reveal data-reveal-delay="150"
+            action="https://formspree.io/f/mrpejvby" method="POST" novalidate>
+        <h3 class="form-title">Formulaire de contact</h3>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="cf-name">Nom <span class="required-star" aria-hidden="true">*</span></label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" placeholder="Votre nom" required>
+            <span class="field-error" data-for="cf-name"></span>
+          </div>
+          <div class="form-field">
+            <label for="cf-email">E-mail <span class="required-star" aria-hidden="true">*</span></label>
+            <input type="email" id="cf-email" name="email" autocomplete="email" placeholder="vous@exemple.com" required>
+            <span class="field-error" data-for="cf-email"></span>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="cf-subject">Sujet <span class="required-star" aria-hidden="true">*</span></label>
+          <input type="text" id="cf-subject" name="subject" placeholder="Projet, collaboration, question…" required>
+          <span class="field-error" data-for="cf-subject"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="cf-message">Message <span class="required-star" aria-hidden="true">*</span></label>
+          <textarea id="cf-message" name="message" rows="5" minlength="10" placeholder="Décrivez votre projet…" required></textarea>
+          <span class="field-error" data-for="cf-message"></span>
+        </div>
+
+        <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <button type="submit" class="btn btn-primary form-submit">
+          <span class="btn-label">Envoyer le message <i class="fa-solid fa-paper-plane"></i></span>
+        </button>
+
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+
+        <p class="form-alt">Vous préférez le mail ? <a href="#" id="mailFallback" data-user="elhadji.mamadoukane8" data-domain="gmail.com">Écrivez-moi directement par e-mail</a></p>
+      </form>
+    </div>
+
+    <div class="testimonial-card" data-reveal>
+      <i class="fa-solid fa-quote-left quote-icon"></i>
+      <p>El Hadji Mamadou KANE est un étudiant passionné et dévoué. Assidu et travailleur, qui cherche toujours à améliorer ses compétences.</p>
+      <div class="testimonial-author">
+        <div>
+          <h4>Mr Ba</h4>
+          <span>Prof de Sciences, LBI</span>
+        </div>
+      </div>
+    </div>
+      <div class="testimonial-card" data-reveal data-reveal-delay="120">
+      <i class="fa-solid fa-quote-left quote-icon"></i>
+      <p>Collaborer avec El Hadji sur JOKKO a été très enrichissant. Sérieux, rigoureux et à l'écoute, il a parfaitement assumé son rôle dans l'équipe. Son esprit d'organisation et sa réactivité ont grandement contribué à la réussite du projet.</p>
+      <div class="testimonial-author">
+        <div>
+          <h4>Binôme — Projet JOKKO</h4>
+          <span>Co-développeur, équipe de 2</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© 2026 EMK. Tous droits réservés.</p>
+    <div class="footer-social">
+      <span class="follow-label">Suivez moi sur mes réseaux</span>
+      <div class="social-icons">
+        <a href="https://github.com/insrobane4-tech" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/el-hadji-mamadou-kane-49951a443/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/MkInsrobane4" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://instagram.com/___papi8___" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+      </div>
+      <a href="#contact" class="footer-contact-link">Me contacter <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    <div class="made-with">
+      <span class="made-label">Conçu &amp; développé avec</span>
+      <span class="made-signature">
+       
+        <span class="made-author">El Hadji Mamadou KANE</span>
+        <span class="made-divider" aria-hidden="true"></span>
+        <span class="made-stack">HTML · CSS · JavaScript</span>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
