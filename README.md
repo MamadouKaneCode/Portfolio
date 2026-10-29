@@ -85,7 +85,7 @@ Aucune installation ni dépendance n'est nécessaire.
 ## Contact
 
 - 📧 Email : elhadji.mamadoukane8@gmail.com
-- 💼 GitHub : https://github.com/insrobane4-tech
+- 💼 GitHub : https://github.com/MamadouKaneCode
 - 🔗 LinkedIn : https://www.linkedin.com/in/el-hadji-mamadou-kane-49951a443/
 
 ---
