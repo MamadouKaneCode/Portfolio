@@ -3,7 +3,7 @@
 
 Portfolio personnel d'un étudiant en génie logiciel : présentation de mon parcours, de mes compétences et de mes projets. Le site est réalisé en **HTML, CSS et JavaScript **, avec un thème sombre aux accents violet et bleu.
 
-🔗 **Démo en ligne** :  https://insrobane4-tech.github.io/Portfolio/
+🔗 **Démo en ligne** :   https://mamadoukanecode.github.io/Portfolio/
 ![alt text](image.png)
 
 ---
